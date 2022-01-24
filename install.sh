@@ -52,5 +52,9 @@ brew install gh
 # Remove outdated versions from the cellar.
 brew cleanup
 
-# NVM & node & tldr & other global packages
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
 # inconsolata for powerline
