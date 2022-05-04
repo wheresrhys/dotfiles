@@ -44,3 +44,8 @@ function githubNav {
 alias gp=githubNav -p
 alias resolve="g s | grep UU | sed s/UU// | xargs s"
 
+function br {
+  echo $(git symbolic-ref --short HEAD)
+}
+
+alias pull="g pull origin $(br)"
