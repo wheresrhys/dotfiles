@@ -1,6 +1,8 @@
 # Add `~/bin` to the `$PATH`
 export PATH="/usr/local/rubygems/bin:node_modules/.bin:$HOME/bin:$PATH";
 
+# rust binaries
+export PATH="/Users/rhys.evans/.cargo/bin:$PATH"
 # make sure homebrew gets precedence over system default CLIs
 export PATH="/usr/local/bin:$PATH";
 
