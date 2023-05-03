@@ -73,6 +73,9 @@ source $ZSH/oh-my-zsh.sh
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+# rust binaries
+export PATH="/Users/rhys.evans/.cargo/bin:$PATH"
+
 # make sure homebrew gets precedence over system default CLIs
 export PATH="/usr/local/bin:$PATH";
 
