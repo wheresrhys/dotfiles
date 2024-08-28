@@ -88,7 +88,8 @@ for file in ~/.{rhys_shell,ft_shell,locals}; do
 done;
 unset file;
 
-
+eval "$(pyenv init -)"
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

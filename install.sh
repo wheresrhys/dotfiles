@@ -46,8 +46,8 @@ brew install awscli
 brew tap heroku/brew && brew install heroku
 brew install terraform
 brew install circleci
-brew install vault
 brew install gh
+brew install pyenv pyenv-virtualenv
 
 # Remove outdated versions from the cellar.
 brew cleanup
