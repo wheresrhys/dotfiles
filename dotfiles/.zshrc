@@ -64,7 +64,7 @@ ZSH_THEME="node"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws docker docker-compose heroku keychain node npm npx nvm )
+plugins=(git keychain node npm npx )
 
 source $ZSH/oh-my-zsh.sh
 
