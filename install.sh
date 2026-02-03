@@ -39,12 +39,8 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-brew install wget
 brew install jq
 brew install watchman
-brew install awscli
-brew tap heroku/brew && brew install heroku
-brew install terraform
 brew install circleci
 brew install gh
 brew install pyenv pyenv-virtualenv
