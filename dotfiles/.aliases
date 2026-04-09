@@ -15,7 +15,6 @@
 
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias src="cd ~/Sites"
@@ -38,8 +37,6 @@ alias trimcopy="tr -d '\n' | pbcopy"
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-alias fix='fixn & fixb'
-alias fixb='rm -Rf bower_components && bower install'
 # PROGRAMMING
 # Find my IP address
 alias ip="ipconfig getifaddr en1"

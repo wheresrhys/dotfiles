@@ -13,14 +13,14 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp -a ./dotfiles_tmp/zsh/. ~/.oh-my-zsh/custom/
 
-# set up sublime symlink
-ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/bin/s
+# # set up sublime symlink
+# ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ~/bin/s
 
-# copy my standard settings into sublime
-cp -a ./dotfiles_tmp/sublime/. ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+# # copy my standard settings into sublime
+# cp -a ./dotfiles_tmp/sublime/. ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 
 
-# install nvm
+# install volta
 if [ ! -d "$HOME/.volta	" ]; then
 	curl https://get.volta.sh | bash
 fi
@@ -39,6 +39,7 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+brew install node
 brew install jq
 brew install watchman
 brew install circleci

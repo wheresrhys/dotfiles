@@ -15,15 +15,15 @@ ZSH_THEME="node"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 30
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -35,7 +35,7 @@ ZSH_THEME="node"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -64,7 +64,7 @@ ZSH_THEME="node"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git keychain node npm npx )
+plugins=(git keychain node npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,14 +84,15 @@ export PATH="/opt/homebrew/bin:$PATH"
 VOLTA_HOME=$HOME/.volta
 
 export PATH="$VOLTA_HOME/bin:$PATH";
+# Add Cursor to PATH
+export PATH="/Applications/Cursor.app/Contents/Resources/app/bin:$PATH"
 
-for file in ~/.{rhys_shell,ft_shell,locals}; do
+
+
+for file in ~/.{rhys_shell,locals}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
-
-# eval "$(pyenv init -)"
-# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
